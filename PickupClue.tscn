@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://puxnrd5crbed"]
+
+[ext_resource type="Script" uid="uid://b5khhr7c8xhty" path="res://PickupClue.gd" id="1_rm3ov"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nhbb5"]
+load_path = "res://.godot/imported/Basic Grass Biom things 1.png-8814472e7ce84ee8299ea425ba2e5cd7.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rm3ov"]
+atlas = SubResource("CompressedTexture2D_nhbb5")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ea7e"]
+size = Vector2(16, 16)
+
+[node name="PickupClue" type="Area2D" unique_id=1137788760]
+script = ExtResource("1_rm3ov")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2094852570]
+texture = SubResource("AtlasTexture_rm3ov")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1024145484]
+shape = SubResource("RectangleShape2D_4ea7e")

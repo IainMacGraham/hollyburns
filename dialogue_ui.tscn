@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://312glw4xei80"]
+
+[node name="DialogueUiOLD" type="Control" unique_id=1850435896]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Panel" type="Panel" parent="." unique_id=77487356]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1811937249]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="." unique_id=645011358]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0

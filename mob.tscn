@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b3xwrmeyq35t6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jfba5"]
+
+[node name="Mob" type="RigidBody2D" unique_id=1116523615]
+collision_mask = 0
+gravity_scale = 0.0
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=716492296]
+sprite_frames = SubResource("SpriteFrames_jfba5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1408686333]
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1848757870]

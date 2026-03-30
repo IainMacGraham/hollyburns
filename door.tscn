@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://cp3ise8kilxdj"]
+
+[ext_resource type="Script" uid="uid://dtlmdn780ltsl" path="res://door.gd" id="1_ba8gm"]
+[ext_resource type="Texture2D" uid="uid://d2sptxrr1d4bs" path="res://Animations/DoorAjar.png" id="2_50cdl"]
+[ext_resource type="Texture2D" uid="uid://bhywtc1466kri" path="res://Animations/DoorOpening.png" id="3_y5njw"]
+[ext_resource type="Texture2D" uid="uid://bmxtb30ga2rs" path="res://Animations/DoorClosed.png" id="4_4xadh"]
+[ext_resource type="Script" uid="uid://cem1mn4h1afcr" path="res://door_interact_area.gd" id="5_y5njw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6hwww"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_50cdl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_y5njw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4xadh")
+}],
+"loop": false,
+"name": &"close",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_4xadh")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_4xadh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_y5njw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_50cdl")
+}],
+"loop": false,
+"name": &"open",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_50cdl"]
+size = Vector2(16, 16)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_50cdl"]
+radius = 15.995882
+height = 47.987648
+
+[node name="Door" type="StaticBody2D" unique_id=1863444669]
+script = ExtResource("1_ba8gm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1894661270]
+sprite_frames = SubResource("SpriteFrames_6hwww")
+animation = &"close"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1216034437]
+shape = SubResource("RectangleShape2D_50cdl")
+
+[node name="interact_area" type="Area2D" parent="." unique_id=1712976921]
+script = ExtResource("5_y5njw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interact_area" unique_id=566465183]
+position = Vector2(8, 0)
+rotation = 1.5934856
+shape = SubResource("CapsuleShape2D_50cdl")

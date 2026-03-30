@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://c34y23oney586"]
+
+[ext_resource type="Script" uid="uid://cn4sf2g4k2qxs" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://cxi44f3y71lin" path="res://Animations/down1.png" id="2_hqtel"]
+[ext_resource type="Texture2D" uid="uid://usvlo6ebjdtj" path="res://Animations/stillFront.png" id="2_nvl01"]
+[ext_resource type="Texture2D" uid="uid://copls6b0l0gnb" path="res://Animations/down2.png" id="3_sweqy"]
+[ext_resource type="Texture2D" uid="uid://bj46mmo34ynep" path="res://Animations/faceLeftStill.png" id="5_ivps1"]
+[ext_resource type="Texture2D" uid="uid://5ewfk1auqbr5" path="res://Animations/leftWalk1.png" id="6_urp6f"]
+[ext_resource type="Texture2D" uid="uid://b4fx6cn8xwixj" path="res://Animations/leftWalk2.png" id="7_bwjto"]
+[ext_resource type="Texture2D" uid="uid://0vdle1hcqf6" path="res://Animations/faceRightStill.png" id="8_606se"]
+[ext_resource type="Texture2D" uid="uid://dsryyh72bx5o4" path="res://Animations/rightWalk1.png" id="9_u1c27"]
+[ext_resource type="Texture2D" uid="uid://kh6vgpv7s8jt" path="res://Animations/rightWalk2.png" id="10_op7ga"]
+[ext_resource type="Texture2D" uid="uid://bahuwm5tjmi1s" path="res://Animations/backStill.png" id="11_bwjto"]
+[ext_resource type="Texture2D" uid="uid://bor5ofyf6yrct" path="res://Animations/backWalk1.png" id="12_606se"]
+[ext_resource type="Texture2D" uid="uid://c343cq3ugi00x" path="res://Animations/backWalk2.png" id="13_u1c27"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2hs0m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nvl01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_hqtel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sweqy")
+}],
+"loop": true,
+"name": &"walk_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ivps1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_urp6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bwjto")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_606se")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_u1c27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_op7ga")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_bwjto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_606se")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_u1c27")
+}],
+"loop": true,
+"name": &"walk_up",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_urp6f"]
+radius = 4.0
+height = 12.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i3pqv"]
+radius = 41.01219
+
+[node name="player" type="CharacterBody2D" unique_id=809082259 groups=["player"]]
+script = ExtResource("1_4flbx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=403968873]
+sprite_frames = SubResource("SpriteFrames_2hs0m")
+animation = &"walk_down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=17647306]
+visible = false
+position = Vector2(0, 8)
+shape = SubResource("CapsuleShape2D_urp6f")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=889936258]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1382525795]
+shape = SubResource("CircleShape2D_i3pqv")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=831013307]
+position_smoothing_enabled = true
+drag_left_margin = 0.0
+drag_top_margin = 0.0
+drag_right_margin = 0.0
+drag_bottom_margin = 0.0
+
+[node name="ClueIndicator" type="Node2D" parent="." unique_id=54317995]
+
+[node name="Label" type="Label" parent="ClueIndicator" unique_id=710679830]
+offset_left = -3.0
+offset_top = -32.0
+offset_right = 5.0
+offset_bottom = -12.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 14
+text = "?"
+
+[connection signal="area_entered" from="InteractionArea" to="." method="_on_interaction_area_area_entered"]
+[connection signal="area_exited" from="InteractionArea" to="." method="_on_interaction_area_area_exited"]

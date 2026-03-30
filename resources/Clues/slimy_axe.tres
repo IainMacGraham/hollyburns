@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ClueData" format=3 uid="uid://dx5x6rledrst1"]
+
+[ext_resource type="Texture2D" uid="uid://cjsxt1epnvd6d" path="res://Sprout Lands - Sprites - Basic pack/Objects/Basic_tools_and_meterials.png" id="1_gfaic"]
+[ext_resource type="Script" uid="uid://c1c5yip666y6s" path="res://resources/ClueData.gd" id="1_gvtna"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5nx2j"]
+atlas = ExtResource("1_gfaic")
+region = Rect2(16, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_gvtna")
+id = "slimy_axe"
+title = "Slimy Axe"
+description = "An axe that has oil or something on it, hopefully from the swampy water...."
+icon = SubResource("AtlasTexture_5nx2j")
+location_found = "Water by the Westpoint campfire"
+metadata/_custom_type_script = "uid://c1c5yip666y6s"

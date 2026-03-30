@@ -1,0 +1,330 @@
+[gd_scene format=3 uid="uid://bisy5w21o4s1g"]
+
+[ext_resource type="Script" uid="uid://cwew4x6eaf1aw" path="res://dialogue_box.gd" id="1_senjy"]
+[ext_resource type="Script" uid="uid://dj3vr6ut1kura" path="res://InvPanel.gd" id="2_n23yb"]
+[ext_resource type="Script" uid="uid://vfmxewqhr1u7" path="res://ClueNotif.gd" id="3_0nste"]
+[ext_resource type="Script" uid="uid://bnpkdwmaf1oe4" path="res://help_panel.gd" id="4_if77y"]
+[ext_resource type="Script" uid="uid://d1jy7cq0j1bxy" path="res://map_panel.gd" id="5_85jfh"]
+[ext_resource type="Texture2D" uid="uid://biclt2ssr1vg7" path="res://Animations/minimap.png" id="6_med3p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0nste"]
+bg_color = Color(0.9098039, 0.8745098, 0.7529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.61960787, 0.54901963, 0.41568628, 1)
+corner_detail = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_if77y"]
+bg_color = Color(0.101960786, 0.32156864, 0.4627451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_351bv"]
+bg_color = Color(0.101960786, 0.32156864, 0.4627451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_85jfh"]
+bg_color = Color(0.101960786, 0.32156864, 0.4627451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_med3p"]
+bg_color = Color(0.9098039, 0.8745098, 0.7529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.61960787, 0.54901963, 0.41568628, 1)
+corner_detail = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f71wr"]
+bg_color = Color(0.101960786, 0.32156864, 0.4627451, 1)
+
+[node name="UI" type="CanvasLayer" unique_id=802604324]
+
+[node name="DialogueBox" type="PanelContainer" parent="." unique_id=1198807252]
+anchors_preset = -1
+anchor_top = 0.693
+anchor_right = 1.0
+anchor_bottom = 0.79
+offset_top = -14.7400055
+offset_bottom = 38.800003
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_senjy")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialogueBox" unique_id=494914054]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DialogueBox/VBoxContainer" unique_id=1059198846]
+layout_mode = 2
+
+[node name="NPCLabel" type="Label" parent="DialogueBox/VBoxContainer/HBoxContainer" unique_id=2024345837]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 6
+autowrap_mode = 2
+
+[node name="CloseButton" type="Button" parent="DialogueBox/VBoxContainer/HBoxContainer" unique_id=1139987136]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 6
+text = "  x  "
+
+[node name="PlayerInput" type="LineEdit" parent="DialogueBox/VBoxContainer" unique_id=1791799235]
+custom_minimum_size = Vector2(0, 12)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 6
+
+[node name="SendButton" type="Button" parent="DialogueBox/VBoxContainer" unique_id=663037340]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Send"
+
+[node name="InvPanel" type="Control" parent="." unique_id=570485218]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 180.0
+offset_top = 2.0
+offset_right = -1.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_n23yb")
+
+[node name="PanelContainer" type="PanelContainer" parent="InvPanel" unique_id=325101557]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0nste")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InvPanel/PanelContainer" unique_id=1536562066]
+layout_mode = 2
+
+[node name="Header" type="PanelContainer" parent="InvPanel/PanelContainer/VBoxContainer" unique_id=1999712143]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_if77y")
+
+[node name="HeaderRow" type="HBoxContainer" parent="InvPanel/PanelContainer/VBoxContainer/Header" unique_id=1642764437]
+clip_contents = true
+layout_mode = 2
+
+[node name="CLUES" type="Label" parent="InvPanel/PanelContainer/VBoxContainer/Header/HeaderRow" unique_id=1943224171]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.9607843, 0.9411765, 0.8784314, 1)
+theme_override_font_sizes/font_size = 8
+text = "CLUES"
+
+[node name="CloseButton" type="Button" parent="InvPanel/PanelContainer/VBoxContainer/Header/HeaderRow" unique_id=688978827]
+custom_minimum_size = Vector2(12, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0.9607843, 0.9411765, 0.8784314, 1)
+theme_override_font_sizes/font_size = 8
+text = "x"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="InvPanel/PanelContainer/VBoxContainer" unique_id=2044859976]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="CluesList" type="VBoxContainer" parent="InvPanel/PanelContainer/VBoxContainer/ScrollContainer" unique_id=247238799]
+layout_mode = 2
+
+[node name="EmptyPrompt" type="Label" parent="InvPanel/PanelContainer/VBoxContainer" unique_id=1485867793]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.36078432, 0.2901961, 0.16470589, 1)
+theme_override_font_sizes/font_size = 6
+text = "There's something odd going on here. I should look around... "
+autowrap_mode = 2
+
+[node name="ClueNotif" type="PanelContainer" parent="." unique_id=1512468938]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("3_0nste")
+
+[node name="MarginContainer" type="MarginContainer" parent="ClueNotif" unique_id=42716621]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ClueNotif/MarginContainer" unique_id=1455973678]
+layout_mode = 2
+theme_override_font_sizes/font_size = 6
+
+[node name="HelpButton" type="Button" parent="." unique_id=905167058]
+offset_right = 22.0
+offset_bottom = 17.0
+theme_override_font_sizes/font_size = 6
+text = "Help"
+
+[node name="HelpPanel" type="Control" parent="." unique_id=1444570958]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -190.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_if77y")
+
+[node name="PanelContainer" type="PanelContainer" parent="HelpPanel" unique_id=1209879841]
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HelpPanel/PanelContainer" unique_id=1173886071]
+layout_mode = 2
+
+[node name="Header" type="PanelContainer" parent="HelpPanel/PanelContainer/VBoxContainer" unique_id=1695075772]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_351bv")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HelpPanel/PanelContainer/VBoxContainer/Header" unique_id=96515950]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HelpPanel/PanelContainer/VBoxContainer/Header/HBoxContainer" unique_id=284554888]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 8
+text = "CONTROLS"
+
+[node name="Button" type="Button" parent="HelpPanel/PanelContainer/VBoxContainer/Header/HBoxContainer" unique_id=151315838]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "x"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HelpPanel/PanelContainer/VBoxContainer" unique_id=823055952]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HelpPanel/PanelContainer/VBoxContainer/VBoxContainer" unique_id=1123735368]
+layout_mode = 2
+theme_override_font_sizes/font_size = 7
+text = "W,A,S,D - MOVE"
+
+[node name="Label2" type="Label" parent="HelpPanel/PanelContainer/VBoxContainer/VBoxContainer" unique_id=2034192687]
+layout_mode = 2
+theme_override_font_sizes/font_size = 7
+text = "F - INTERACT"
+
+[node name="Label3" type="Label" parent="HelpPanel/PanelContainer/VBoxContainer/VBoxContainer" unique_id=2084897327]
+layout_mode = 2
+theme_override_font_sizes/font_size = 7
+text = "Tab - INVENTORY"
+
+[node name="Label4" type="Label" parent="HelpPanel/PanelContainer/VBoxContainer/VBoxContainer" unique_id=1164527940]
+layout_mode = 2
+theme_override_font_sizes/font_size = 7
+text = "C - CHAT"
+
+[node name="Label5" type="Label" parent="HelpPanel/PanelContainer/VBoxContainer/VBoxContainer" unique_id=1957028975]
+layout_mode = 2
+theme_override_font_sizes/font_size = 7
+text = "M - MAP"
+
+[node name="Header2" type="PanelContainer" parent="HelpPanel/PanelContainer/VBoxContainer" unique_id=517340368]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_85jfh")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HelpPanel/PanelContainer/VBoxContainer/Header2" unique_id=2141938017]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HelpPanel/PanelContainer/VBoxContainer/Header2/HBoxContainer" unique_id=1695747786]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "GOAL"
+
+[node name="Label" type="Label" parent="HelpPanel/PanelContainer/VBoxContainer" unique_id=2014403084]
+custom_minimum_size = Vector2(132, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 6
+text = "Ask around and find clues to uncover Camp Hollyburn's mystery. Don't arouse suscpicion."
+autowrap_mode = 2
+
+[node name="MapPanel" type="Control" parent="." unique_id=1494693548]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("5_85jfh")
+
+[node name="PanelContainer" type="PanelContainer" parent="MapPanel" unique_id=865081411]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -104.0
+offset_right = 104.0
+offset_bottom = 180.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_med3p")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MapPanel/PanelContainer" unique_id=15505390]
+layout_mode = 2
+
+[node name="Header" type="PanelContainer" parent="MapPanel/PanelContainer/VBoxContainer" unique_id=1968364382]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_f71wr")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MapPanel/PanelContainer/VBoxContainer/Header" unique_id=1856887275]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MapPanel/PanelContainer/VBoxContainer/Header/HBoxContainer" unique_id=246134060]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 8
+text = "MAP"
+
+[node name="CloseButton" type="Button" parent="MapPanel/PanelContainer/VBoxContainer/Header/HBoxContainer" unique_id=497956122]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "x"
+
+[node name="MapContainer" type="Control" parent="MapPanel/PanelContainer/VBoxContainer" unique_id=1582398552]
+custom_minimum_size = Vector2(200, 152)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MapPanel/PanelContainer/VBoxContainer/MapContainer" unique_id=654667518]
+custom_minimum_size = Vector2(200, 152)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_top = -2.0
+offset_right = 100.0
+offset_bottom = 150.0
+grow_horizontal = 2
+texture = ExtResource("6_med3p")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="PlayerDot" type="ColorRect" parent="MapPanel/PanelContainer/VBoxContainer/MapContainer" unique_id=1305971231]
+layout_mode = 0
+offset_right = 2.0
+offset_bottom = 2.0
+color = Color(1, 0, 0, 1)
+
+[connection signal="pressed" from="HelpButton" to="HelpPanel" method="_on_help_button_pressed"]

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="NPCData" format=3 uid="uid://ds011yet0c011"]
+
+[ext_resource type="Script" uid="uid://df3c2ok5sycnv" path="res://resources/npc_data.gd" id="1_we6vr"]
+
+[resource]
+script = ExtResource("1_we6vr")
+npc_id = "ryan"
+display_name = "Ryan"
+personality = "Early 30s, lean and boyish. Self-righteous quiet authority, slightly irritating. Practiced smile that doesn't reach his eyes. Precise with words unless stressed or irritated."
+background = "18 years at Hollyburns, 8 as staff. Initiated in his second year — acted like he knew all along. Reports to Woody and occasionally the Senior Director, who can't stand him (he doesn't know this). Given the title 'senior counsellor' to keep him happy."
+secret = "Knows most of what Hollyburns really is. Knows the locked outbuilding and other restricted locations around camp, though doesn't always have access. Aware the player is a potential concern — Woody flagged it."
+suspicion_reveal_threshold = 1
+metadata/_custom_type_script = "uid://df3c2ok5sycnv"

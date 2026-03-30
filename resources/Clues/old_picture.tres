@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ClueData" format=3 uid="uid://cc1kif6pvxtum"]
+
+[ext_resource type="Script" uid="uid://c1c5yip666y6s" path="res://resources/ClueData.gd" id="1_t82td"]
+[ext_resource type="Texture2D" uid="uid://bxh23yvpdf32b" path="res://Sprout Lands - Sprites - Basic pack/Objects/Basic_Furniture.png" id="1_vt5f2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d8lmd"]
+atlas = ExtResource("1_vt5f2")
+region = Rect2(32, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_t82td")
+id = "old_picture"
+title = "Old Picture"
+description = "Picture of the camp's owner in a weird robe."
+icon = SubResource("AtlasTexture_d8lmd")
+location_found = "Lodge"
+metadata/_custom_type_script = "uid://c1c5yip666y6s"

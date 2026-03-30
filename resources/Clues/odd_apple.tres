@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ClueData" format=3 uid="uid://cpfyhxr3iw6gh"]
+
+[ext_resource type="Texture2D" uid="uid://c1umr207sorhg" path="res://Sprout Lands - Sprites - Basic pack/Objects/Basic_Grass_Biom_things.png" id="1_ui1i3"]
+[ext_resource type="Script" uid="uid://c1c5yip666y6s" path="res://resources/ClueData.gd" id="2_4cyj2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v736g"]
+atlas = ExtResource("1_ui1i3")
+region = Rect2(32, 32, 16, 16)
+
+[resource]
+script = ExtResource("2_4cyj2")
+id = "odd_apple"
+title = "Odd Apple"
+description = "An apple found deep in the woods. Something feels off about it."
+icon = SubResource("AtlasTexture_v736g")
+location_found = "The Woods"
+metadata/_custom_type_script = "uid://c1c5yip666y6s"

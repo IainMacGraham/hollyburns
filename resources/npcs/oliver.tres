@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="NPCData" format=3 uid="uid://dsbunnalux36h"]
+
+[ext_resource type="Script" uid="uid://df3c2ok5sycnv" path="res://resources/npc_data.gd" id="1_sgll8"]
+
+[resource]
+script = ExtResource("1_sgll8")
+npc_id = "oliver"
+display_name = "Oliver"
+personality = "19, easygoing, quick with a joke. British — uses slang like mate, crackin, bloody. Genuinely enjoys the camp. Occasionally slips and says cwnt then apologises profusely."
+background = "First summer at Hollyburns, came on a friend's recommendation. Supervises a junior boys' cabin and assists the sailing head — forces kids to tip their boats on her day off. Finds Woody a bit intense but chalks it up to culture shock."
+suspicion_reveal_threshold = 99
+metadata/_custom_type_script = "uid://df3c2ok5sycnv"

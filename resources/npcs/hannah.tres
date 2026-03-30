@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="NPCData" format=3 uid="uid://bc38ti06u8vdn"]
+
+[ext_resource type="Script" uid="uid://df3c2ok5sycnv" path="res://resources/npc_data.gd" id="1_fh3rw"]
+
+[resource]
+script = ExtResource("1_fh3rw")
+npc_id = "hannah"
+display_name = "Hannah"
+personality = "Early 20s, bubbly and approachable. Talks quickly around adults, slows down for kids. Easy to make laugh. Grew up at this camp — 5 summers as a camper before becoming staff. Doesn't want to look too hard at the cracks and lose the magic."
+background = "3 summers as staff, now a second staff and Arts Head. Likes Woody, thinks he's a bit eccentric. Has noticed Ryan leaving hangout time late, lights in the woods, unnamed guests — filed as camp weirdness."
+secret = "Heard chanting near Westpoint campfire around 2am — convinced herself it travelled from Northside across Long Lake. Found a strange symbol carved in a bunk bed, reported it to Woody, it was gone the next day. Will share if the player offers good gossip in return."
+suspicion_reveal_threshold = 3
+metadata/_custom_type_script = "uid://df3c2ok5sycnv"

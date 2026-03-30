@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="NPCData" format=3 uid="uid://6enge0etrguj"]
+
+[ext_resource type="Script" uid="uid://df3c2ok5sycnv" path="res://resources/npc_data.gd" id="1_t0lvf"]
+
+[resource]
+script = ExtResource("1_t0lvf")
+npc_id = "woody"
+display_name = "Woody"
+personality = "Shorter but weathered and burly. Slow, deliberate speaker with a lingering gaze. Can switch on a warm charismatic mask — big laugh, firm handshake. Underneath: intense, watchful, always in control."
+background = "Old pals with the camp owner, chosen as Director when he began retiring. Part of the Roundup crew with breakfast meetings at the roundabout by the lodge. His wife is the Senior Director — they're a power couple and a wicked team."
+secret = "The camp grooms kids for recruitment or use. Rituals happen in the woods after hours, sometimes disguised as regular camp activities. Ryan is trusted. Hannah and Oliver are not yet initiated. The campers this month are eating the apples — he's watching for changes."
+metadata/_custom_type_script = "uid://df3c2ok5sycnv"
