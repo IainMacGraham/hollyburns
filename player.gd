@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed: float = 120.0 #was 80
+@export var speed: float = 100.0 #was 80
 @onready var clue_indicator = $ClueIndicator
 
 var interactables_in_range = []

@@ -16,7 +16,9 @@ You spent the winter thinking about that note. About the boot. About the fog.
 
 This summer you're coming back — not as a camper. As second-year property staff. Now is the time to have a proper look around.
 
-[color=#ffffff]You're going to find out what's going on at Camp Hollyburn.[/color][/color]"""
+[color=#ffffff]You're going to find out what's going on at Camp Hollyburn.[/color]
+
+[color=#ffffff](WARNING: ALL NPC DIALOGUE IS GENERATED LIVE BY OPENAI's LLM)[/color][/color]"""
 
 const SCROLL_SPEED: float = 8.0   # pixels per second
 const SCROLL_DELAY: float = 4    # seconds before scroll starts
