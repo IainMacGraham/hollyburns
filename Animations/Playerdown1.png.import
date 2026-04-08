@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bahuwm5tjmi1s"
-path="res://.godot/imported/backStill.png-a5b2dbfba584a9db665dd3fe09efb1a3.ctex"
+uid="uid://ds18t7dglbros"
+path="res://.godot/imported/Playerdown1.png-ebbc43048266798797f41edd582dc4e7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Animations/backStill.png"
-dest_files=["res://.godot/imported/backStill.png-a5b2dbfba584a9db665dd3fe09efb1a3.ctex"]
+source_file="res://Animations/Playerdown1.png"
+dest_files=["res://.godot/imported/Playerdown1.png-ebbc43048266798797f41edd582dc4e7.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c343cq3ugi00x"
-path="res://.godot/imported/backWalk2.png-5339c4c733456feb54f7e2a5864cfca1.ctex"
+uid="uid://dvn08n2ecpa5x"
+path="res://.godot/imported/Playerside3.png-1ad9c77778b7c41193f13a133910b924.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Animations/backWalk2.png"
-dest_files=["res://.godot/imported/backWalk2.png-5339c4c733456feb54f7e2a5864cfca1.ctex"]
+source_file="res://Animations/Playerside3.png"
+dest_files=["res://.godot/imported/Playerside3.png-1ad9c77778b7c41193f13a133910b924.ctex"]
 
 [params]
 

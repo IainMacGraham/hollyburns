@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bj46mmo34ynep"
-path="res://.godot/imported/faceLeftStill.png-8be548f4fa8400f01668ac7b7677fb95.ctex"
+uid="uid://g1nx1jls7nuf"
+path="res://.godot/imported/PlayerLeftSide3.png-c4a6912b26285a3a5998d77c0ad45edc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Animations/faceLeftStill.png"
-dest_files=["res://.godot/imported/faceLeftStill.png-8be548f4fa8400f01668ac7b7677fb95.ctex"]
+source_file="res://Animations/PlayerLeftSide3.png"
+dest_files=["res://.godot/imported/PlayerLeftSide3.png-c4a6912b26285a3a5998d77c0ad45edc.ctex"]
 
 [params]
 
