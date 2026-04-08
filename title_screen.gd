@@ -84,9 +84,9 @@ func _setup_buttons() -> void:
 	settings_btn.text = "SETTINGS"
 	credits_btn.text  = "CREDITS"
 	_style_button(reset_btn)
-	reset_btn.text = "↺"
+	reset_btn.text = "Replay"
 	reset_btn.custom_minimum_size = Vector2(12, 12)
-	reset_btn.add_theme_font_size_override("font_size", 10)
+	reset_btn.add_theme_font_size_override("font_size", 6)
 
 func _style_button(btn: Button) -> void:
 	# Normal
